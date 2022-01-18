@@ -1,665 +1,712 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
-    <meta name="color-scheme" content="light">
-    <meta name="supported-color-schemes" content="light">
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
-    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
-    <!--[if gte mso 9]>
-    <xml>
-        <o:OfficeDocumentSettings>
-            <o:AllowPNG/>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-    </xml>
-    <![endif]-->
+     <head>
+          <!--Help character display properly.-->
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+          <!--Set the initial scale of the email.-->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <!--Force Outlook clients to render with a better MS engine.-->
+          <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+          <!--Help prevent blue links and autolinking-->
+          <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+          <!--prevent Apple from reformatting and zooming messages.-->
+          <meta name="x-apple-disable-message-reformatting">
 
-    <!-- Web Font / @font-face : BEGIN -->
-    <!-- NOTE: If web fonts are not required, lines 23 - 41 can be safely removed. -->
+          <!--target dark mode-->
+          <meta name="color-scheme" content="light dark">
+          <meta name="supported-color-schemes" content="light dark only">
 
-    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
-    <!--[if mso]>
-        <style>
-            * {
-                font-family: sans-serif !important;
-            }
+          <!-- Allow for better image rendering on Windows hi-DPI displays. -->
+          <!--[if mso]>
+          <noscript>
+          <xml>
+          <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+          </xml>
+          </noscript>
+          <![endif]-->
+
+          <!--to support dark mode meta tags-->
+          <style type="text/css">
+               :root {
+                    color-scheme: light dark;
+                    supported-color-schemes: light dark;
+               }
+          </style>
+
+          <!--webfont code goes here-->
+          <!--[if (gte mso 9)|(IE)]><!-->
+          <!--webfont <link /> goes here-->
+          <style>
+               /*Web font over ride goes here
+               h1, h2, h3, h4, h5, p, a, img, span, ul, ol, li { font-family: 'webfont name', Arial, Helvetica, sans-serif !important; } */
+          </style>
+          <!--<![endif]-->
+
+          <style type="text/css">
+               .body-fix {
+                    height: 100% !important;
+                    margin: 0 auto !important;
+                    padding: 0 !important;
+                    width: 100% !important;
+                    -webkit-text-size-adjust: 100%;
+                    -ms-text-size-adjust: 100%;
+                    -webkit-font-smoothing: antialiased;
+                    word-spacing: normal;
+               }
+
+               div[style*="margin:16px 0"] {
+                    margin: 0 !important;
+               }
+
+               table, td {
+                    border-collapse: collapse !important;
+                    mso-table-lspace: 0pt;
+                    mso-table-rspace: 0pt;
+                    -webkit-text-size-adjust: 100%;
+                    -ms-text-size-adjust: 100%;
+               }
+
+               img {
+                    border: 0;
+                    line-height: 100%;
+                    outline: none;
+                    text-decoration: none;
+                    display: block;
+               }
+
+               p, h1, h2, h3 {
+                    padding: 0;
+                    margin: 0;
+               }
+
+               a[x-apple-data-detectors] {
+                    color: inherit !important;
+                    text-decoration: none !important;
+                    font-size: inherit !important;
+                    font-family: inherit !important;
+                    font-weight: inherit !important;
+                    line-height: inherit !important;
+               }
+
+               u+#body a {
+                    color: inherit;
+                    text-decoration: none;
+                    font-size: inherit;
+                    font-family: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+               }
+
+               ul li{
+                    text-decoration: none;
+                    list-style: none;
+                    display: inline-block;
+               }
+
+               .mobile { display: none; }
+
+          </style>
+
+          <!--mobile styles-->
+          <style>
+          @media screen and (max-width:600px) {
+               .w90p { width: 90% !important; }
+               .w95p { width: 95% !important; }
+               .w100p { width: 100% !important; }
+
+               .imgFull {
+                    width: 100% !important;
+                    height: auto !important;
+               }
+
+               .mobile { display: block !important; }
+
+              h1 { font-size: 50px !important; line-height: 60px !important; }
+               .std {
+                    font-size: 14px !important;
+                    line-height: 20px !important;
+               }
+
+               
+
+               .tPad-0 { padding-top: 0 !important; }
+               .rPad-0 { padding-right: 0 !important; }
+               .lPad-0 { padding-left: 0 !important; }
+               .bPad-30 { padding-bottom: 30px !important; }
+
+          }
+          </style>
+
+          <!--dark mode styles-->
+          <style>
+          @media (prefers-color-scheme: dark) {
+               /* Shows Dark Mode-Only Content, Like Images */
+               .dark-img {
+                    display: block !important;
+                    width: auto !important;
+                    overflow: visible !important;
+                    float: none !important;
+                    max-height: inherit !important;
+                    max-width: inherit !important;
+                    line-height: auto !important;
+                    margin-top: 0px !important;
+                    visibility: inherit !important;
+               }
+
+               /* Hides Light Mode-Only Content, Like Images */
+               .light-img {
+                    display: none;
+                    display: none !important;
+               }
+
+               /* Custom Dark Mode Background Color */
+               .darkmode { background-color: #100E11 !important; }
+               .darkmode2 { background-color: #292929 !important; }
+               
+
+               /* Custom Dark Mode Font Colors */
+               h1, h3, p, span, a { color: #fdfdfd !important; }
+               h2, h2 a { color: #fff !important; }
+
+
+               /* Custom Dark Mode Text Link Color */
+               .link { color: #fff !important; }
+               .footer a.link { color: #fdfdfd !important; }
+          }
+
+          /* Copy dark mode styles for android support */
+          /* Shows Dark Mode-Only Content, Like Images */
+          [data-ogsc] .dark-img {
+               display: block !important;
+               width: auto !important;
+               overflow: visible !important;
+               float: none !important;
+               max-height: inherit !important;
+               max-width: inherit !important;
+               line-height: auto !important;
+               margin-top: 0px !important;
+               visibility: inherit !important;
+          }
+
+          /* Hides Light Mode-Only Content, Like Images */
+          [data-ogsc] .light-img {
+               display: none;
+               display: none !important;
+          }
+
+          /* Custom Dark Mode Background Color */
+          [data-ogsc] .darkmode { background-color: #100E11 !important; }
+          [data-ogsc] .darkmode2 { background-color: #292929 !important; }
+          
+
+          /* Custom Dark Mode Font Colors */
+          [data-ogsc] h1, [data-ogsc] h3, [data-ogsc] p, [data-ogsc] span, [data-ogsc] a { color: #fdfdfd !important; }
+          [data-ogsc] h2, [data-ogsc] h2 a { color: #fff !important; }
+
+          /* Custom Dark Mode Text Link Color */
+          [data-ogsc] .link { color: #fff !important; }
+          [data-ogsc] .footer a.link { color: #fdfdfd !important; }
+          </style>
+
+         <style>
+             /* Correction for keeping white text white in Gmail Dark Mode iOS */
+            u + .body .gmail-screen { background:#000; mix-blend-mode:screen; }
+            u + .body .gmail-difference { background:#000; mix-blend-mode:difference; }
         </style>
-    <![endif]-->
 
-    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
-    <!--[if !mso]><!-->
-    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
-    <!--<![endif]-->
 
-    <!-- Web Font / @font-face : END -->
 
-    <!-- CSS Reset : BEGIN -->
-    <style>
-
-        /* What it does: Tells the email client that only light styles are provided but the client can transform them to dark. A duplicate of meta color-scheme meta tag above. */
-        :root {
-          color-scheme: light;
-          supported-color-schemes: light;
-        }
-
-        /* What it does: Remove spaces around the email design added by some email clients. */
-        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
-        html,
-        body {
-            margin: 0 auto !important;
-            padding: 0 !important;
-            height: 100% !important;
-            width: 100% !important;
-        }
-
-        /* What it does: Stops email clients resizing small text. */
-        * {
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-        }
-
-        /* What it does: Centers email on Android 4.4 */
-        div[style*="margin: 16px 0"] {
-            margin: 0 !important;
-        }
-
-        /* What it does: forces Samsung Android mail clients to use the entire viewport */
-        #MessageViewBody, #MessageWebViewDiv{
-            width: 100% !important;
-        }
-
-        /* What it does: Stops Outlook from adding extra spacing to tables. */
-        table,
-        td {
-            mso-table-lspace: 0pt !important;
-            mso-table-rspace: 0pt !important;
-        }
-
-        /* What it does: Replaces default bold style. */
-        th {
-        	font-weight: normal;
-        }
-
-        /* What it does: Fixes webkit padding issue. */
-        table {
-            border-spacing: 0 !important;
-            border-collapse: collapse !important;
-            table-layout: fixed !important;
-            margin: 0 auto !important;
-        }
-
-        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
-        a {
-            text-decoration: none;
-        }
-
-        /* What it does: Uses a better rendering method when resizing images in IE. */
-        img {
-            -ms-interpolation-mode:bicubic;
-        }
-
-        /* What it does: A work-around for email clients meddling in triggered links. */
-        a[x-apple-data-detectors],  /* iOS */
-        .unstyle-auto-detected-links a,
-        .aBn {
-            border-bottom: 0 !important;
-            cursor: default !important;
-            color: inherit !important;
-            text-decoration: none !important;
-            font-size: inherit !important;
-            font-family: inherit !important;
-            font-weight: inherit !important;
-            line-height: inherit !important;
-        }
-
-        /* What it does: Prevents Gmail from changing the text color in conversation threads. */
-        .im {
-            color: inherit !important;
-        }
-
-        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
-        .a6S {
-           display: none !important;
-           opacity: 0.01 !important;
-		}
-		/* If the above doesn't work, add a .g-img class to any image in question. */
-		img.g-img + div {
-		   display: none !important;
-		}
-
-        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-        /* Create one of these media queries for each additional viewport size you'd like to fix */
-
-        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
-        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-            u ~ div .email-container {
-                min-width: 320px !important;
-            }
-        }
-        /* iPhone 6, 6S, 7, 8, and X */
-        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
-            u ~ div .email-container {
-                min-width: 375px !important;
-            }
-        }
-        /* iPhone 6+, 7+, and 8+ */
-        @media only screen and (min-device-width: 414px) {
-            u ~ div .email-container {
-                min-width: 414px !important;
-            }
-        }
-
-    </style>
-    <!-- CSS Reset : END -->
-
-    <!-- Progressive Enhancements : BEGIN -->
-    <style>
-        ul li{
-        	display: inline;
-        }
-        /* Media Queries */
-        @media screen and (max-width: 600px) {
-
-            .email-container {
-                width: 100% !important;
-                margin: auto !important;
-            }
-
-            /*Forces table cells into full-width rows*/
-            .stack, .center{
-        	    display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                direction: ltr !important;
-            }
-            .center{
-            	text-align: center !important; 
-                display: block !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                float: none !important;
-            }
-            #heading{
-                padding: 10px 20px 5px !important;
-            }
-            #img{
-                padding: 10px 0px !important;
-                margin:auto 0 !important;
-                display: block;
-            }
-            #img center img{
-                max-width: 325px !important;
-            }
-            .middle{
-                margin: 0 auto !important;
-                width: 100%;
-                max-width: 150px !important;
-            }
-            #btn{
-                margin: auto 0 !important;
-                padding-right: 500px !important;
-            }
-            #btn a{
-                text-align: center !important;
-            }
-            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
-            .center-on-narrow {
-                text-align: center !important;
-                display: block !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                float: none !important;
-            }
-            table.center-on-narrow {
-                display: inline-block !important;
-            }
-
-            /* What it does: Adjust typography on small screens to improve readability */
-            .email-container p {
-                font-size: 17px !important;
-            }
-        }
-
-    </style>
-    <!-- Progressive Enhancements : END -->
+          <!--correct superscripts in Outlook-->
+          <!--[if (gte mso 9)|(IE)]>
+          <style>
+          sup{font-size:100% !important;}
+          </style>
+          <![endif]-->
+          <title></title>
 
 </head>
-<!--
-	The email background color (#222222) is defined in three places:
-	1. body tag: for most email clients
-	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
-	3. mso conditional: For Windows 10 Mail
--->
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-  <center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #222222;">
-    <!--[if mso | IE]>
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
-    <tr>
-    <td>
-    <![endif]-->
 
-        <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="max-height:0; overflow:hidden; mso-hide:all;" aria-hidden="true">
-            (Optional) This text will appear in the inbox preview, but not the email body. It can be used to supplement the email subject line or even summarize the email's contents. Extended text preheaders (~490 characters) seems like a better UX for anyone using a screenreader or voice-command apps like Siri to dictate the contents of an email. If this text is not included, email clients will automatically populate it using the text (including image alt text) at the start of the email's body.
-        </div>
-        <!-- Visually Hidden Preheader Text : END -->
+     <body id="body" class="darkmode body body-fix">
+          <div role="article" aria-roledescription="email" aria-label="Email from Wonderblum" xml:lang="en" lang="en">
+               <!--hidden preheader with preh-header spacer hack-->
+               <div class="litmus-builder-preview-text" style="display:none;">
+               &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+               </div>
 
-        <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
-        <!-- Preview Text Spacing Hack : BEGIN -->
-        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-        </div>
-        <!-- Preview Text Spacing Hack : END -->
+               <!--start of email-->
+               <table class="darkmode" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:100%; background: #eeeeee;">
 
-        <!-- Email Body : BEGIN -->
-        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto; max-width: 600px;" class="email-container">
-	        <!-- Email Header : BEGIN -->
-            <tr>
-                <td style="padding: 0; text-align: center">
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #fff; max-width: 600px;">
-                        <tr>
-                            <td valign="top" width="50%" class="stack">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td style="padding: 20px; text-align: left;" class="center" id="heading">
-                                            <img src="https://www.dropbox.com/s/fmq6dgegnbkakat/lennar.png?raw=1" alt="" width="100%" height="100%" border="0" style="max-width: 150px; display:block; margin: auto 0;" class="middle">
-                                            <span style="font-size: 12px;">Collection Name at Masterplan Community</span>
+                    <!--main content area-->
+                    <tr>
+                         <td class="tPad-0" align="center" valign="top" style="padding-top: 20px;">
+                              <table class="w100p darkmode2" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:600px; background-color: #ffffff;">
+
+                                   <tr>
+                                        <td align="center" valign="top" style="padding:5px 30px; background: #fff; color: #000;">
+                                        <!--2 column - image left (normal stack)-->
+                                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                                  <tr>
+                                                       <td align="center" valign="top" style="font-size:0;">
+                                                   <!--[if (gte mso 9)|(IE)]>
+                                                   <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                                                   <tr>
+                                                   <td valign="top" style="width: 255px;">
+                                                   <![endif]-->
+                                                        <div class="rPad-0" style="display:inline-block;vertical-align:top; padding-right: 20px;">
+                                                             <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width: 255px;">
+                                                                  <tr>
+                                                                       <td align="left" valign="top" style="padding-bottom: 30px;">
+                                                                        <img src="https://www.dropbox.com/s/fmq6dgegnbkakat/lennar.png?raw=1" alt="Lennar" width="100%" height="100%" border="0" style="max-width: 150px; display:block; margin: auto 0; padding: 20px 5px 5px 0px; height: auto;" class="middle">
+                                                                        <span style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;">Collection Name at Masterplan Community</span>
+                                                                       </td>
+                                                                  </tr>
+
+                                                             </table>
+                                                        </div>
+                                                   <!--[if (gte mso 9)|(IE)]>
+                                                   </td><td valign="top" style="width:20px;">
+                                                   </td><td valign="top" style="width:265px;">
+                                                   <![endif]-->
+                                                        <div style="display:inline-block;vertical-align:top;">
+                                                             <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width:265px;">
+                                                                  <tr>
+                                                                        <td align="left" valign="top" style="padding:0px; text-align: right; font-family: Arial, Helvetica, sans-serif;">
+                                                                            <a href="#"  style="font-size: 14px; text-decoration: underline; padding: 20px 0px 5px 0; color: #000; display:inline-block; mso-padding-alt:0;"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:30pt">&nbsp;</i><![endif]--><span style="mso-text-raise:15pt;"><span class="gmail-screen"><span class="gmail-difference">000-000-0000</span></span></span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]--></a><br>
+                                                                            <span style="font-size: 12px;">Address</span>
+                                                                        </td>
+                                                                  </tr>
+                                                             </table>
+                                                        </div>
+                                                   <!--[if (gte mso 9)|(IE)]>
+                                                   </td>
+                                                   </tr>
+                                                   </table>
+                                                   <![endif]-->
+                                                       </td>
+                                                  </tr>
+                                             </table>
                                         </td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td valign="top" width="50%" class="stack">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td style="padding: 20px; text-align: right;" class="center" id="heading">
-                                            <a href="#" style="color: #000; text-decoration: underline;">000-000-0000</a><br>
-                                            Address
+                                   </tr>
+
+
+
+                                   <tr>
+                                        <td align="center" valign="top" style="padding:10 0px 0px 0px;">
+                                        <!--Header with logo-->
+
+                                             <!--light mode logo-->
+                                             <a href="#" target="_blank"><img class="light-img" src="https://www.dropbox.com/s/fv6asvua7yezvdk/lennarhouse.jpg?raw=1" width="100%" height="100%" alt="qobuz"
+                                             style=" max-width:600px;color: #4a4a4a; font-family: 'Trebuchet MS', Arial, sans-serif; text-align:center; font-weight:bold; font-size:24px; line-height:28x; text-decoration: none; padding: 0;"></a>
+                                                  <!--dark mode logo-->
+                                                  <!--[if !mso]><! -->
+                                                  <div class="dark-img" style="display:none; overflow:hidden; width:0px; max-height:0px; max-width:0px; line-height:0px; visibility:hidden;" align="center">
+                                                       <img src="https://www.dropbox.com/s/fv6asvua7yezvdk/lennarhouse.jpg?raw=1" width="100%" height="100%" alt="qobuz" style="color: #4a4a4a; font-family: 'Trebuchet MS', Arial, sans-serif; text-align:center; font-weight:bold; font-size:24px; line-height:28px; text-decoration: none; padding: 0;" border="0" />
+                                                  </div>
+                                                  <!--<![endif]-->
+                                             </a>
                                         </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-	        <!-- Email Header : END -->
+                                   </tr>
 
-            <!-- Hero Image, Flush : BEGIN -->
-            <tr>
-                <td style="background-color: #ffffff;">
-                    <img src="https://www.dropbox.com/s/fv6asvua7yezvdk/lennarhouse.jpg?raw=1" width="600" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; background: #dddddd;  color: #555555; margin: auto; display: block;" class="g-img">
-                </td>
-            </tr>
-            <!-- Hero Image, Flush : END -->
+                                   <tr>
 
-            <!-- 1 Column Text-->
-            <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" style="background: #2d2d2d; color: #fff; text-align: center; padding: 0; margin: 5px; max-width: 600px;">
-                        <tr>
-                            <td>
-                                <h3 style="padding: 0 5px; font-size: 32px; margin: 10px;">Brand-new & move-in ready</h3>
-                                <p style="padding:0 5px; font-size: 24px; margin: 15px;">New homes at Collection Name at Masterplan Name</p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- 1 Column Text -->
+                                   </tr>
 
-            <!-- 1 Column Text-->
-            <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" style="background: #fff; display: block; width: 100%; max-width: 600px; margin: 0 auto; padding: 0px;">
-                        <tr>
-                            <td>
-                                <p style="padding: 10px 25px; font-size: 14px;line-height: 22px; ">On the hunt for a home you’ll love? Then discover a collection of new single-family homes for sale at Community Name. With several move-in ready homes available now, you can enjoy the benefits of living in a newly-constructed home – without the wait. Each home comes complete with our Everything’s Included® features and upgrades at no additional cost. Offering home designs for every type of lifestyle, including Next Gen® plans with attached private suites, homeowners enjoy resort-style amenities suitable for every age.<br><br>
-                                    You can even explore the option to sell your home to Opendoor at a competitive price, then use a seamless home buying experience to purchase and move into a home that’s brand-new.
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- 1 Column Text -->
-
-	        <!-- 2 Even Columns : BEGIN -->
-	        <tr>
-	            <td style="padding: 10px; background-color: #ffffff;">
-	                <!--two column buttons--->
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #fff; max-width: 600px; padding: 15px;" >
-                        <tr>
-                            <td valign="top" width="50%" class="stack">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td style="padding: 40px; text-align: left;" class="center" id="btn">
-                                            <a style="background: #2d2d2d; color:#fff; border-radius: 20px; padding: 15px 35px; font-size: 14px;">View Collections</a>
+                                   <tr>
+                                        <td class="darkmode">
+                                             <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" style="background: #2d2d2d; color: #fff; text-align: center; padding: 0; margin: 0px; max-width: 600px;">
+                                                  <tr>
+                                                       <td>
+                                                            <h3 style="padding: 0 5px; font-size: 36px; margin: 10px; font-family: Times New Roman, Garamond, Serif; font-weight: normal;">Brand-new & move-in ready</h3>
+                                                            <p style="padding:0 5px; font-size: 21px; margin: 15px; font-family: Arial, Helvetica, Sans-serif;">New homes at Collection Name at Masterplan Name</p>
+                                                       </td>
+                                                  </tr>
+                                             </table>
                                         </td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td valign="top" width="50%" class="stack">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td style="padding: 40px; text-align: center;" class="center" id="btn">
-                                            <a style="background: #fff;color:#2d2d2d; border-radius: 20px; padding: 15px 30px; font-size: 14px; border: solid 2px #2d2d2d;">Learn about Opendoor</a>
+                                   </tr>
+
+                                   <tr>
+                                        <td align="center" valign="top" style="padding:20px 0 ;">
+                                             <!--Intro copy-->
+                                             <p class="std" style="font-family: Arial,Helvetica, Sans-serif; margin: 0 20px; font-size: 14px; line-height: 22px; font-weight: normal; color: #0A080B; text-align: left;">On the hunt for a home you’ll love? Then discover a collection of new single-family homes for sale at Community Name. With several move-in ready homes available now, you can enjoy the benefits of living in a newly-constructed home – without the wait. Each home comes complete with our Everything’s Included® features and upgrades at no additional cost. Offering home designs for every type of lifestyle, including Next Gen® plans with attached private suites, homeowners enjoy resort-style amenities suitable for every age.</p><br>
+                                            <p class="std" style="font-family: Arial,Helvetica, Sans-serif; margin: 0 20px; font-size: 14px; line-height: 22px; font-weight: normal; color: #0A080B; text-align: left;">
+                                            You can even explore the option to sell your home to Opendoor at a competitive price, then use a seamless home buying experience to purchase and move into a home that’s brand-new.</p>
                                         </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-    	            </table>
-	            </td>
-	        </tr>
-	        <!-- 2 Even Columns : END -->
+                                   </tr>
 
-            <!--2 end heading-->
-	        <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #f1f1f1; width:100%; max-width: 600px; margin: 0 auto;">
-                        <tr>
-                            <td>
-                                <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
-                                    <tr>
-                                        <td style="padding-left: 15px; font-size: 18px;">Explore homes</td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td align="right">
-                                <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
-                                    <tr>
-                                        <td align="right" style="padding: 15px;">
-                                            <a style="text-decoration: underline; text-align: right; display: block; ">View all</a>
+
+                                   <tr>
+                                        <td align="center" valign="top" style="padding:0 20px 20px; background: #fff; color: #000;">
+                                        <!--2 column - image left (normal stack)-->
+                                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                              <tr>
+                                                   <td align="center" valign="top" style="font-size:0;">
+                                                   <!--[if (gte mso 9)|(IE)]>
+                                                   <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                                                   <tr>
+                                                   <td valign="top" style="width: 255px;">
+                                                   <![endif]-->
+                                                        <div class="rPad-0" style="display:inline-block;vertical-align:top; margin: 0 auto; justify-content: center;">
+                                                             <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width: 225px;">
+                                                                  <tr>
+                                                                       <td align="left" valign="top" style="padding-bottom: 20px;">
+                                                                        <a href="#"  style="background-color: #2d2d2d; font-size: 14px; font-family: Arial, Helvetica, sans-serif;  text-decoration: none; padding: 15px 40px; color: #fff; border: solid 2px #2d2d2d; border-radius: 30px; display:inline-block; mso-padding-alt:0;"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:30pt">&nbsp;</i><![endif]--><span style="mso-text-raise:15pt;"><span class="gmail-screen"><span class="gmail-difference">View Collections</span></span></span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]--></a>
+                                                                       </td>
+                                                                  </tr>
+                                                             </table>
+                                                        </div>
+                                                   <!--[if (gte mso 9)|(IE)]>
+                                                   </td><td valign="top" style="width:20px;">
+                                                   </td><td valign="top" style="width:265px;">
+                                                   <![endif]-->
+                                                       <div style="display:inline-block;vertical-align:top; margin: 0 auto; justify-content: center;">
+                                                            <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width:225px;">
+                                                                 <tr>
+                                                                      <td align="left" valign="top" style="padding-bottom: 20px;">
+                                                                            <a href="#"  style="background-color: #fff; font-size: 14px; font-family: Arial, Helvetica, sans-serif;  text-decoration: none; padding: 15px 40px; color: #2d2d2d; border: solid 2px #2d2d2d; border-radius: 30px; display:inline-block; mso-padding-alt:0;"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:30pt">&nbsp;</i><![endif]--><span style="mso-text-raise:15pt;"><span class="gmail-screen"><span class="gmail-difference">Learn about Opendoor</span></span></span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]--></a>
+                                                                      </td>
+                                                                 </tr>
+                                                            </table>
+                                                       </div>
+                                                   <!--[if (gte mso 9)|(IE)]>
+                                                   </td>
+                                                   </tr>
+                                                   </table>
+                                                   <![endif]-->
+                                                   </td>
+                                              </tr>
+                                         </table>
                                         </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!--2 end heading end-->
-                
-            <!--table-->
-            <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" style="text-align: center; width:100%; max-width: 600px; padding: 10px 5px 15px 5px; background: #fff;">
-                        <tr>
-                            <th style="font-size: 14px; padding-top: 15px; padding-bottom: 5px;">Homesite/Plan</th>
-                            <th style="font-size: 14px; padding-top: 15px;">Sq ft / Beds / Baths</th>
-                            <th style="font-size: 14px; padding-top: 15px;">Price</th>
-                            <th style="font-size: 14px; padding-top: 15px;">View</th>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <div style="border-bottom: #000 2px solid; margin: 0 15px;"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; padding-left: 25px;font-weight: bold; font-size: 16px; padding: 10px;">Collection name</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 3px 0;">101/Plan 1</td>
-                            <td style="padding: 3px 0;">2,234 / 4/ 2.5</td>
-                            <td style="padding: 3px 0;">$399,990</td>
-                            <td style="padding:3px 15px 3px 0;"><a href="#" style="text-decoration: underline; color: #000;">View home</a></td>
-                        </tr>
-                        <td colspan="4">
-                            <div style="border-bottom: #666 1px solid; margin: 0 15px;"></div>
-                        </td>
-                        <tr>
-                            <td style="padding: 3px 0;">201/Plan 2</td>
-                            <td style="padding: 3px 0;">2,234 / 4 / 2.5</td>
-                            <td style="padding: 3px 0;">$399,990</td>
-                            <td style="padding:3px 15px 3px 0;"><a href="#" style="text-decoration: underline; color: #000;">View home</a></td>
-                        </tr>
-                        <td colspan="4">
-                            <div style="border-bottom: #666 1px solid; margin: 0 15px;"></div>
-                        </td>
-                        <tr>
-                            <td style="padding: 3px 0;">301/Plan 3</td>
-                            <td style="padding: 3px 0;">2,234 / 4 / 2.5</td>
-                            <td style="padding: 3px 0;">$399,990</td>
-                            <td style="padding:3px 15px 3px 0;"><a href="#" style="text-decoration: underline; color: #000;">View home</a></td>
-                        </tr>
-                        <td colspan="4">
-                            <div style="border-bottom: #666 1px solid; margin: 0 15px;"></div>
-                        </td>
-                    </table>
-                </td>
-            </tr>
-            <!--table end-->
+                                   </tr>
 
-            
-
-            <!--single column text-->
-            <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" style="background:#fff; text-align: center; max-width: 600px;">
-                        <tr>
-                            <td style="padding: 15px;">
-                                <p style=" display: block; font-size: 24px; ">Find out how much home you can afford</p>
-                                <p style="font-size: 18px;">Click <a href="#" style="color: #000; font-weight: bold; text-decoration: underline;">here</a> to use the Lennar Mortgage calculator.</p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!--single column text end-->
-
-            <!--single heading-->
-            <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="600px" align="center" style="background: #f1f1f1; width:100%; max-width: 600px; margin: 0 auto; align-items: center;">
-                        <tr>
-                            <td>
-                                <p style="padding: 5px 15px; font-size: 18px;">
-                                    Visit Us
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!--single heading end-->
-
-            <tr>
-                <td>
-                    <!--two column collection and image--->
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #fff; max-width: 600px;" style="padding: 15px;">
-                        <tr>
-                            <td valign="top" width="50%" class="stack">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td style="padding: 20px; text-align: left;" class="center">
-                                            <h4>Collection Name at Masterplan Name</h4>
-                                            <p>6789 Voyage Cove<br>
-                                            Water Gardens, FL 88888<br>
-                                            888-888-8888</p>
-                                            <a style="color:#000; border: #000 solid 1px; padding: 12px 20px; border-radius: 20px;">Get directions &rarr;</a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td valign="top" width="50%" class="stack">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td style="padding: 20px; text-align: center;" class="center" id="img">
-                                            <center>
-                                                <img src="https://www.dropbox.com/s/u32wjrqydhzt3j9/map.jpg?raw=1" alt="" width=100%  height=100%  style="display: block; padding: 0px; margin: 0 auto; max-width: 400px; width:100%;"/>
-                                            </center>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-    	            </table>
-                </td>
-            </tr>
-
-            <!--help info-->
-            <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background:#f1f1f1; text-align: center;  max-width: 600px; margin: 0 auto; display: block;">
-                        <tr>
-                            <td>
-                                <h3 style="font-size: 30px; margin: 15px 0 0 0;">We're here to help you</h3>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p style="padding: 10px 20px; text-align: justify; font-size: 18px; line-height: 20px; text-align: center;">
-                                    We are real estate professionals with decades of combined experience in the market. We will help find the right home for your family and budget.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <ul style=" justify-content: space-evenly; list-style: none;">
-                                    <li>
-                                        <img src="https://www.dropbox.com/s/8ryr1zk8helxr5w/realtor.png?raw=1" width= "70px" max-height="100px" alt="realtor" style="border-radius: 50%;">   
-                                    </li>
-                                    <li>
-                                        <img src="https://www.dropbox.com/s/8ryr1zk8helxr5w/realtor.png?raw=1" width= "70px" max-height="100px" alt="realtor" style="border-radius: 50%;">
-                                    </li>
-                                    <li>
-                                        <img src="https://www.dropbox.com/s/8ryr1zk8helxr5w/realtor.png?raw=1" width= "70px" max-height="100px" alt="realtor" style="border-radius: 50%;">
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!--help info end-->
-
-            <tr>
-                <td>
-                    <!--two column buttons--->
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #f1f1f1; max-width: 600px;" style="padding: 15px;">
-                        <tr>
-                            <td valign="top" width="50%" class="stack">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td align="center"  style="padding: 30px 40px; text-align: left; margin: 0 10px;" class="center">
-                                            <a style="background: #2d2d2d; color:#fff; border-radius: 20px; padding: 15px 35px; font-size: 14px; text-align: center;">Schedule a tour</a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td valign="top" width="50%" class="stack">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td align="center" style="padding: 30px 40px; text-align: center; margin: 0 10px;" class="center">
-                                            <a style="background: #fff;color:#2d2d2d; border-radius: 20px; padding: 15px 30px; font-size: 14px; border: solid 2px #2d2d2d; text-align: center;">Contact a consultant</a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-
-            <!--contact-->
-            <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #2d2d2d; max-width: 600px; color: #fff;">
-                        <tr>
-                            <td valign="top" width="50%">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                    <tr>
+                                    <!--2 end heading-->
+	                              <tr>
                                         <td>
-                                            <img src="https://www.dropbox.com/s/fkgni0aazo5frl4/lennar2.png?raw=1" alt="" width="100%" height="100%" style="max-width: 200px; margin: 5px; display: block; padding: 15px;">
+                                             <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #f1f1f1; width:100%; max-width: 600px; margin: 0 auto;">
+                                                  <tr>
+                                                       <td>
+                                                            <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+                                                                 <tr>
+                                                                      <td style="padding: 5px 15px; font-size: 24px; font-family: Times New Roman, Garamond, serif; margin: 5px;">Explore homes</td>
+                                                                 </tr>
+                                                            </table>
+                                                       </td>
+                                                       <td align="right">
+                                                            <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+                                                                 <tr>
+                                                                      <td align="right" style="padding: 15px;">
+                                                                           <a style="text-decoration: underline; text-align: right; display: block; font-size: 18px; font-family: Times New Roman, Garamond, serif; margin: 5px; font-weight: normal;">View all</a>
+                                                                      </td>
+                                                                 </tr>
+                                                            </table>
+                                                       </td>
+                                                   </tr>
+                                             </table>
                                         </td>
-                                    </tr>
-                                </table>
-                            </td>
-                            <td valign="top" width="50%">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width= "100%">
-                                    <tr>
-                                        <td style="padding: 5px 25px; text-align: right;">
-                                            <ul style=" justify-content: space-evenly; list-style: none; padding: 0;">
-                                                <li style="padding:0 5px;">
-                                                   <a href="#"><img src="https://www.dropbox.com/s/8ryavls84i8yhol/face.png?raw=1" width= "100%" max-height="100px" alt="facebook logo" style="max-width: 25px;"></a>  
-                                                </li>
-                                                <li style="padding:0 5px;">
-                                                    <a href="#"><img src="https://www.dropbox.com/s/j9853iafd5rks5g/insta.png?raw=1" width= "100%" max-height="100px" alt="instagram logo" style="max-width: 25px;"></a>
-                                                </li>
-                                                <li style="padding:0 5px;">
-                                                    <a href="#"><img src="https://www.dropbox.com/s/qlu960ejqidkey4/pin.png?raw=1" width= "100%" max-height="100px" alt="pintrest logo" style="max-width: 25px;"></a>
-                                                </li>
-                                                <li style="padding:0 5px;">
-                                                    <a href="#"><img src="https://www.dropbox.com/s/u738l7w6pr2yqsq/tube.png?raw=1" width= "100%" max-height="100px" alt="youtube logo" style="max-width: 25px;"></a>
-                                                </li>
-                                                <li style="padding:0 5px;">
-                                                    <a href="#"><img src="https://www.dropbox.com/s/w70ntmx8it1m19c/twitter.png?raw=1" width= "100%" max-height="100px" alt="twitter logo" style="max-width: 25px;"></a>
-                                                </li>
-                                            </ul>
+                                   </tr>
+                                   <!--2 end heading end-->
+
+                                   <!--table-->
+                                   <tr>
+                                        <td>
+                                             <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" style=" width:100%; max-width: 600px; padding: 10px; background: #fff; font-family: Arial, Helvetica, Sans-serif;">
+                                                  <tr>
+                                                       <th style="font-size: 14px; padding-top: 15px; padding-bottom: 5px; padding-left: 30px; font-size: 14px; text-align: left;">Homesite / Plan</th>
+                                                       <th style="font-size: 14px; padding-top: 15px; padding-bottom: 5px; font-size: 14px; text-align: left;">Sq ft / Beds / Baths</th>
+                                                       <th style="font-size: 14px; padding-top: 15px; padding-bottom: 5px; font-size: 14px; text-align: left;">Price</th>
+                                                       <th style="font-size: 14px; padding-top: 15px; padding-bottom: 5px; padding-left: 14px; font-size: 14px; text-align: left;">View</th>
+                                                  </tr>
+                                                  <tr>
+                                                       <td colspan="4">
+                                                            <div style="border-bottom: #000 2px solid; margin: 0 15px;"></div>
+                                                       </td>
+                                                  </tr>
+                                                  <tr>
+                                                       <td style="text-align: left; font-weight: bold; font-size: 16px; padding: 10px 10px 10px 20px;">Collection name</td>
+                                                  </tr>
+                                                  <tr>
+                                                       <td style="padding: 4px 0 6px 35px; font-size: 14px; text-align: left;">101/Plan 1</td>
+                                                       <td style="padding: 4px 0 6px 5px; font-size: 14px; text-align: left;">2,234 / 4/ 2.5</td>
+                                                       <td style="padding: 4px 20px 6px 0px; font-size: 14px; text-align: left;">$399,990</td>
+                                                       <td style="padding:4px 15px 6px 5px; font-size: 14px; text-align: left;"><a href="#" style="text-decoration: underline; color: #000;">View home</a></td>
+                                                  </tr>
+                                                  <td colspan="4">
+                                                       <div style="border-bottom: #666 1px solid; margin: 0 15px;"></div>
+                                                  </td>
+                                                  <tr>
+                                                       <td style="padding: 5px 0 6px 35px; font-size: 14px; text-align: left;">201/Plan 2</td>
+                                                       <td style="padding: 5px 0 6px 5px; font-size: 14px; text-align: left;">2,234 / 4 / 2.5</td>
+                                                       <td style="padding: 5px 20px 6px 0; font-size: 14px; text-align: left;">$399,990</td>
+                                                       <td style="padding:5px 15px 6px 5px; font-size: 14px; text-align: left;"><a href="#" style="text-decoration: underline; color: #000;">View home</a></td>
+                                                  </tr>
+                                                  <td colspan="4">
+                                                       <div style="border-bottom: #666 1px solid; margin: 0 15px;"></div>
+                                                  </td>
+                                                  <tr>
+                                                       <td style="padding: 5px 0 6px 35px; font-size: 14px; text-align: left;">301/Plan 3</td>
+                                                       <td style="padding: 5px 0 6px 5px; font-size: 14px; text-align: left;">2,234 / 4 / 2.5</td>
+                                                       <td style="padding: 5px 20px 6px 0; font-size: 14px; text-align: left;">$399,990</td>
+                                                       <td style="padding:5px 15px 5px 5px; font-size: 14px; text-align: left;"><a href="#" style="text-decoration: underline; color: #000;">View home</a></td>
+                                                  </tr>
+                                                  <td colspan="4">
+                                                       <div style="border-bottom: #666 1px solid; margin: 0 15px;"></div>
+                                                  </td>
+                                             </table>
                                         </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!--contact info end-->
+                                   </tr>
+                                   <!--table end-->
 
-	        <!-- 1 Column Text : BEGIN -->
-	        <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #2d2d2d; color: #fff; max-width: 600px;">
-                        <tr>
-                            <td>
-                                <p style="font-size: 12px; margin: 0 10px; padding:5px 15px 10px 15px;">
-                                        Lennar Mortgage is seller's affiliate, but use of Lennar Mortgage not required to purchase a home ( See Affiliated Business Arrangement Disclosure ). Lennar Mortgage NMLS#/License/Branch: ______. Prices do not include closing costs and other fees to be paid by buyer and are subject to change without notice. [or Prices do not include closing costs and other fees to be paid by buyer (including a builder fee as described in the purchase agreement) and are subject to change without notice.]Features, amenities, floor plans, elevations, and designs vary and are subject to changes or substitution without notice. Items shown are artist’s renderings and may contain options that are not standard on all models or not included in the purchase price. Availability may vary. Sq. ft. is estimated; actual sq. ft. will differ. Garage/Bay size may vary from home to home and may not accommodate all vehicles. Plans to build out this neighborhood as proposed are subject to change without notice. Please see your New Home Consultant and home purchase agreement for actual features designated as an Everything’s Included feature. Maps are not to scale and are for relative location purposes only. This is not an offer in states where prior registration is required. Void where prohibited by law. Copyright © 2021 Lennar Corporation and Lennar Mortgage, LLC. All rights reserved. Lennar, the Lennar logo, Everything’s Include, Next Gen – The Home Within A home, Lennar Mortgage and the Lennar Mortgage logo are U.S. registered service marks or service marks of Lennar Corporation and/or its subsidiaries. Seller’s Broker: ______. Construction License(s): ______. Date 00/21
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-	        <!-- 1 Column Text : END -->
+                                   <!--single column text-->
+                                   <tr>
+                                        <td>
+                                             <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" style="background:#fff; text-align: center; max-width: 600px; padding: 10px 0 0 0;">
+                                                  <tr>
+                                                       <td style="padding: 20px;">
+                                                            <p style=" display: block; font-size: 30px; font-family: Times New Roman, Garamond, serif; margin: 10px 0;">Find out how much home you can afford</p>
+                                                            <p style="font-size: 20px; font-family: Arial, Helvetica, Sans-serif; padding: 10px 0;">Click <a href="#" style="color: #000; font-weight: bold; text-decoration: underline; font-family: Arial, Helvetica, Sans-serif;">here</a> to use the Lennar Mortgage calculator.</p>
+                                                   </td>
+                                                  </tr>
+                                             </table>
+                                        </td>
+                                   </tr>
+                                   <!--single column text end-->
 
-	    </table>
-	    <!-- Email Body : END -->
+                                   <!--single heading-->
+                                   <tr>
+                                        <td>
+                                             <table cellspacing="0" cellpadding="0" border="0" width="600px" align="center" style="background: #f1f1f1; width:100%; max-width: 600px; margin: 0 auto; align-items: center;">
+                                                  <tr>
+                                                       <td>
+                                                            <p style="padding: 10px 15px; font-size: 24px; font-family: Times New Roman, Garamond, serif; margin: 5px;">
+                                                            Visit Us
+                                                            </p>
+                                                       </td>
+                                                  </tr>
+                                             </table>
+                                        </td>
+                                   </tr>
+                                   <!--single heading end-->
 
-	    <!-- Email Footer : BEGIN -->
-        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: auto; background-color: #fff; color: #000;" class="email-container">
-	        <tr>
-                <td>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="max-width: 600px;">
-                        <tr>
-                            <td>
-                                <p style="font-size: 10px; text-align: center;">To view this email as a webpage, go <a href="#" style="color: #000; text-decoration: underline;">here</a></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; padding: 10px;">
-                                To unsubscribe form future emails <a href="#" style="color: #000; text-decoration: underline;">click here</a><br>
-                                <span style="font-size: 12px;">Lennar Corporation | 681 Greens Parkway | Houston, TX 77077</span><br>
-                                <span style="font-size: 12px;"><a>Privacy Policy</a> | <a>Manage Communication Prefences</a>| <a>Terms & Conditions</a> | <a>Disclaimers</a></span>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-	    </table>
-	    <!-- Email Footer : END -->
+                                   <tr>
+                                        <td align="center" valign="top" style="padding:10px 30px; background: #fff; color: #000;">
+                                             <!--2 column - image right (reverse stack)-->
+                                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                                  <tr>
+                                                       <td align="center" valign="top" style="font-size:0;" dir="rtl">
+                                                       <!--[if (gte mso 9)|(IE)]>
+                                                       <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                                                       <tr>
+                                                       <td valign="top" style="width: 255px;">
+                                                       <![endif]-->
+                                                            <div class="lPad-0" style="display:inline-block;vertical-align:top; padding-left: 20px;">
+                                                                 <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width: 255px;">
+                                                                      <tr>
+                                                                           <td align="left" valign="top">
+                                                                                <img src="https://www.dropbox.com/s/u32wjrqydhzt3j9/map.jpg?raw=1" alt="" width=100%  height=100%  style="display: block; padding: 20px 10px 10px; margin: 0 auto; max-width: 400px; width:100%;" class="imgFull"/>
+                                                                           </td>
+                                                                      </tr>
+                                                                 </table>
+                                                            </div>
+                                                       <!--[if (gte mso 9)|(IE)]>
+                                                       </td><td valign="top" style="width:20px;">
+                                                       </td><td valign="top" style="width:265px;">
+                                                       <![endif]-->
+                                                            <div style="display:inline-block;vertical-align:top;">
+                                                                 <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width:265px;">
+                                                                      <tr>
+                                                                           <td align="left" valign="top" style="padding-bottom: 11px; padding-top: 15px;">
+                                                                                <!--H3 heading-->
+                                                                                <h3 style="font-family:Arial, Helvetica, Sans-serif; font-weight:normal; font-size:20px; line-height:24px; color:#000; margin:0; padding:0;">Collection Name at Masterplan Name</h3>
+                                                                           </td>
+                                                                      </tr>
+                                                                      <tr>
+                                                                           <td align="left" valign="top" >
+                                                                                <!--Paragraph-->
+                                                                                <p style="font-family:Arial, Helvetica, Sans-serif; font-size:14px; color:#000; margin: 0 0 10px 0;  text-align: left; font-weight: normal;">6789 Voyage Cove<br>
+                                                                                     Water Gardens, FL 88888<br>
+                                                                                     888-888-8888</p>
+                                                                           </td>
+                                                                      </tr>
+                                                                      <tr>
+                                                                           <td align="left" valign="top" style="padding:0 0px 50px;">
+                                                                               <a href="#"  style="background-color: #fff; font-size: 14px; font-family: Arial, Helvetica, Sans-serif;  text-decoration: none; padding: 15px 40px; color: #2d2d2d; border: solid 2px #2d2d2d; border-radius: 30px; display:inline-block; mso-padding-alt:0;"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:30pt">&nbsp;</i><![endif]--><span style="mso-text-raise:15pt;"><span class="gmail-screen"><span class="gmail-difference">Get Directions &rarr;</span></span></span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]--></a>
+                                                                           </td>
+                                                                     </tr>
+                                                                 </table>
+                                                            </div>
+                                                       <!--[if (gte mso 9)|(IE)]>
+                                                       </td>
+                                                       </tr>
+                                                       </table>
+                                                       <![endif]-->
+                                                       </td>
+                                                  </tr>
+                                             </table>
+                                        </td>
+                                   </tr>
 
+                                   <!--help info-->
+                                   <tr>
+                                        <td>
+                                             <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background:#f1f1f1; text-align: center;  max-width: 600px; margin: 0 auto; display: block;">
+                                                  <tr>
+                                                       <td>
+                                                            <h3 style="font-size: 30px; margin: 15px 0 0 0; font-weight: normal;">We're here to help you</h3>
+                                                       </td>
+                                                  </tr>
+                                                  <tr>
+                                                       <td>
+                                                            <p style="padding: 10px 20px; text-align: justify; font-size: 18px; line-height: 24px; text-align: center; font-family: Arial, Helvetica, Sans-serif; font-size: 16px;">
+                                                            We are real estate professionals with decades of combined experience in the market. We will help find the right home for your family and budget.
+                                                            </p>
+                                                       </td>
+                                                  </tr>
+                                                  <tr>
+                                                       <td>
+                                                            <ul style=" justify-content: space-evenly; list-style: none;">
+                                                                 <li>
+                                                                      <img src="https://www.dropbox.com/s/8ryr1zk8helxr5w/realtor.png?raw=1" width= "70px" max-height="100px" alt="realtor" style="border-radius: 50%;">   
+                                                                 </li>
+                                                                 <li>
+                                                                      <img src="https://www.dropbox.com/s/8ryr1zk8helxr5w/realtor.png?raw=1" width= "70px" max-height="100px" alt="realtor" style="border-radius: 50%;">
+                                                                 </li>
+                                                                 <li>
+                                                                      <img src="https://www.dropbox.com/s/8ryr1zk8helxr5w/realtor.png?raw=1" width= "70px" max-height="100px" alt="realtor" style="border-radius: 50%;">
+                                                                 </li>
+                                                            </ul>
+                                                       </td>
+                                                  </tr>
+                                             </table>
+                                        </td>
+                                   </tr>
+                                   <!--help info end-->
 
-    <!--[if mso | IE]>
-    </td>
-    </tr>
-    </table>
-    <![endif]-->
-    </center>
-</body>
+                                   <tr>
+                                        <td align="center" valign="top" style="padding:0 20px 20px; background: #f1f1f1; color: #000;">
+                                        <!--2 column - image left (normal stack)-->
+                                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                                  <tr>
+                                                       <td align="center" valign="top" style="font-size:0;">
+                                                       <!--[if (gte mso 9)|(IE)]>
+                                                            <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="width: 100%;">
+                                                            <tr>
+                                                            <td valign="top" style="width: 255px;">
+                                                       <![endif]-->
+                                                            <div class="rPad-0" style="display:inline-block;vertical-align:top; ">
+                                                                 <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width: 225px;">
+                                                                      <tr>
+                                                                           <td align="left" valign="top" style="padding-bottom: 30px;">
+                                                                                 <a href="#"  style="background-color: #2d2d2d; font-size: 14px; font-family: Arial, Helvetica, sans-serif;  text-decoration: none; padding: 15px 40px; color: #fff; border: solid 2px #2d2d2d; border-radius: 30px; display:inline-block; mso-padding-alt:0;"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:30pt">&nbsp;</i><![endif]--><span style="mso-text-raise:15pt;"><span class="gmail-screen"><span class="gmail-difference">Schedule a Tour</span></span></span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]--></a>
+                                                                           </td>
+                                                                      </tr>
+                                                                 </table>
+                                                            </div>
+                                                       <!--[if (gte mso 9)|(IE)]>
+                                                            </td><td valign="top" style="width:20px;">
+                                                            </td><td valign="top" style="width:265px;">
+                                                        <![endif]-->
+                                                            <div style="display:inline-block;vertical-align:top;">
+                                                                 <table class="w100p" cellpadding="0" cellspacing="0" border="0" role="presentation" dir="ltr" style="width:225px;">
+                                                                      <tr>
+                                                                           <td align="left" valign="top" style="padding:0 0px 50px;">
+                                                                                <a href="#"  style="background-color: #f1f1f1; font-size: 14px; font-family: Arial, Helvetica, sans-serif;  text-decoration: none; padding: 15px 40px; color: #2d2d2d; border: solid 2px #2d2d2d; border-radius: 30px; display:inline-block; mso-padding-alt:0;"><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%;mso-text-raise:30pt">&nbsp;</i><![endif]--><span style="mso-text-raise:15pt;"><span class="gmail-screen"><span class="gmail-difference">Contact a Consultant</span></span></span><!--[if mso]><i style="letter-spacing: 25px;mso-font-width:-100%">&nbsp;</i><![endif]--></a>
+                                                                           </td>
+                                                                      </tr>
+                                                                 </table>
+                                                            </div>
+                                                       <!--[if (gte mso 9)|(IE)]>
+                                                            </td>
+                                                            </tr>
+                                                            </table>
+                                                       <![endif]-->
+                                                       </td>
+                                                  </tr>
+                                             </table>
+                                        </td>
+                                   </tr>
+
+                                   <!--contact-->
+                                   <tr>
+                                        <td>
+                                             <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #2d2d2d; max-width: 600px; color: #fff;" class="darkmode2">
+                                                  <tr>
+                                                       <td valign="top" width="50%">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                 <tr>
+                                                                      <td>
+                                                                           <img src="https://www.dropbox.com/s/fkgni0aazo5frl4/lennar2.png?raw=1" alt="" width="100%" height="100%" style="max-width: 150px; margin: 5px; display: block; padding: 25px;">
+                                                                      </td>
+                                                                 </tr>
+                                                            </table>
+                                                       </td>
+                                                       <td valign="top" width="50%">
+                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                 <tr>
+                                                                      <td style="padding: 5px 25px; text-align: right;">
+                                                                           <ul style=" justify-content: space-evenly; list-style: none; padding: 0;">
+                                                                                <li style="padding:0 5px;">
+                                                                                   <a href="#"><img src="https://www.dropbox.com/s/8ryavls84i8yhol/face.png?raw=1" width= "100%" max-height="100px" alt="facebook logo" style="max-width: 25px;"></a>  
+                                                                                </li>
+                                                                                <li style="padding:0 5px;">
+                                                                                    <a href="#"><img src="https://www.dropbox.com/s/j9853iafd5rks5g/insta.png?raw=1" width= "100%" max-height="100px" alt="instagram logo" style="max-width: 25px;"></a>
+                                                                                </li>
+                                                                                <li style="padding:0 5px;">
+                                                                                    <a href="#"><img src="https://www.dropbox.com/s/qlu960ejqidkey4/pin.png?raw=1" width= "100%" max-height="100px" alt="pintrest logo" style="max-width: 25px;"></a>
+                                                                                </li>
+                                                                                <li style="padding:0 5px;">
+                                                                                    <a href="#"><img src="https://www.dropbox.com/s/u738l7w6pr2yqsq/tube.png?raw=1" width= "100%" max-height="100px" alt="youtube logo" style="max-width: 25px;"></a>
+                                                                                </li>
+                                                                                <li style="padding:0 5px;">
+                                                                                    <a href="#"><img src="https://www.dropbox.com/s/w70ntmx8it1m19c/twitter.png?raw=1" width= "100%" max-height="100px" alt="twitter logo" style="max-width: 25px;"></a>
+                                                                                </li>
+                                                                            </ul>
+                                                                      </td>
+                                                                 </tr>
+                                                            </table>
+                                                       </td>
+                                                  </tr>
+                                             </table>
+                                        </td>
+                                   </tr>
+                                   <!--contact end-->
+
+                                   <tr>
+                                        <td>
+                                             <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation" style="background: #2d2d2d; color: #fff; max-width: 600px;" class="darkmode2">
+                                                  <tr>
+                                                       <td>
+                                                            <p style="font-size: 11px; margin: 0 10px; padding:5px 15px 20px 15px; font-family: Helvetica, Arial, sans-serif;">
+                                                                 Lennar Mortgage is seller's affiliate, but use of Lennar Mortgage not required to purchase a home ( See Affiliated Business Arrangement Disclosure ). Lennar Mortgage NMLS#/License/Branch: ______. Prices do not include closing costs and other fees to be paid by buyer and are subject to change without notice. [or Prices do not include closing costs and other fees to be paid by buyer (including a builder fee as described in the purchase agreement) and are subject to change without notice.]Features, amenities, floor plans, elevations, and designs vary and are subject to changes or substitution without notice. Items shown are artist’s renderings and may contain options that are not standard on all models or not included in the purchase price. Availability may vary. Sq. ft. is estimated; actual sq. ft. will differ. Garage/Bay size may vary from home to home and may not accommodate all vehicles. Plans to build out this neighborhood as proposed are subject to change without notice. Please see your New Home Consultant and home purchase agreement for actual features designated as an Everything’s Included feature. Maps are not to scale and are for relative location purposes only. This is not an offer in states where prior registration is required. Void where prohibited by law. Copyright © 2021 Lennar Corporation and Lennar Mortgage, LLC. All rights reserved. Lennar, the Lennar logo, Everything’s Include, Next Gen – The Home Within A home, Lennar Mortgage and the Lennar Mortgage logo are U.S. registered service marks or service marks of Lennar Corporation and/or its subsidiaries. Seller’s Broker: ______. Construction License(s): ______. Date 00/21
+                                                            </p>
+                                                       </td>
+                                                  </tr>
+                                             </table>
+                                        </td>
+                                   </tr>
+
+                                   <tr>
+                                        <td class="darkmode footer" align="center" valign="top" style="padding:20px 30px; background: #fff;">
+                                             <!--Footer-->
+                                             <p style="font-size:12px; color: #2d2d2d">To view this email as a webpage go <a href="#" target="_blank" style=" color: #2d2d2d;">here</a></p>
+                                             <br>
+                                             <br>    
+                                             <p style="font-family: 'Trebuchet MS', Arial, sans-serif;font-size:14px;line-height:24px;mso-line-height-rule:exactly;color:#0a080b;margin-bottom:20px;">To Unsubscribe from future emails <a style="color: #2d2d2d; font-weight: bold; text-decoration: underline;">click here</a><br>
+                                             Lennar Corporation | 681 Greens Parkway | Houston, TX 77077<br>
+                                             <a href="#" class="link" target="_blank" style="color: #0a080b; text-decoration: underline; font-size: 12px;">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" class="link"
+                                             target="_blank" style="color: #0a080b; text-decoration: underline; font-size: 12px;">Manage Communication Prefrences</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" class="link" target="_blank" style="color: #0a080b; text-decoration: underline; font-size: 12px;">Terms & Conditions</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" class="link" target="_blank" style="color: #0a080b; text-decoration: underline; font-size: 12px;">Disclaimers</a>
+                                             </p>
+                                        </td>
+                                   </tr>
+
+                              </table>
+                         </td>
+                    </tr>
+               </table>
+          </div>
+
+     </body>
+
 </html>
